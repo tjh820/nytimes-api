@@ -1,2 +1,3 @@
 # nytimes-api
-group project 
+The group project of 2019!
+
