@@ -1,8 +1,9 @@
-$("#submit-search").on("click", function () {
-    var movie = $("#movie-search").val().trim();
+var queryURL = "https://api-us.faceplusplus.com/facepp/v3/detect?api_key=nvr3TwsTaJJH3k_NF2bi4OxHUWp9";
 
-    $.get( "http://www.omdbapi.com/?t="+movie+"&apikey=29c21804", function( data ) {
-       
-       console.log(data)
-      });
-})
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function(response) {
+  console.log(response);
+
+
