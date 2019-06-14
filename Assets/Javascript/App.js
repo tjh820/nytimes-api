@@ -1,6 +1,8 @@
+$("#submit-search").on("click", function () {
+    var movie = $("#movie-search").val().trim();
 
-
-$(document).ready(function(){
-    
-
+    $.get( "http://www.omdbapi.com/?t="+movie+"&apikey=29c21804", function( data ) {
+       
+       console.log(data)
+      });
 })
