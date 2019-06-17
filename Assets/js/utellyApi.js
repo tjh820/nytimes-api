@@ -1,4 +1,4 @@
-function utellyAPI (input) {
+function utellyAPI(input) {
 
     var title = input;
     var settings = {
