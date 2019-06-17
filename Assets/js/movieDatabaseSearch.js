@@ -1,5 +1,5 @@
 var data;
-randomMovie(35)//this is a test call
+//randomMovie(35) this is a test call
 
 function randomMovie(genre){
     
@@ -19,7 +19,7 @@ function randomMovie(genre){
         data = response.results[num].title
         console.log(num)
         console.log(data)
-        writeInfo(data) //where to call streaming service handler
+        utellyAPI(data) //where to call streaming service handler
     })
     // console.log("outside promise:"+data)
 
