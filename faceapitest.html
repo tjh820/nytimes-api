@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  </head>
+  <body>
+    <form id="myform" method="post" action="https://api-face.sightcorp.com/api/detect/"
+          enctype="multipart/form-data">
+      <input type="text" name="app_key" value="fd482f74184d4403a31e5ba110adb6c2"/>
+      <input type="file" name="img"/>
+      <input type="submit"/>
+    </form>
+    <div id="result">
+    </div>
+
+    <script>
+      $(document).ready(function() {
+
+        var successCallback = function( data, textStatus, jqXHR ) {
+          alert( JSON.stringify( data ) );
+          alert( "disgust level : " + data.people[0].emotions.sadness);
+          console.log(data);
+        };
+        
+        var failCallback = function( jqXHR, textStatus, errorThrown ) {
+          alert( "There has been an error!" );
+        };
+
+        $( "#myform" ).submit(
+          function(e) {
+            e.preventDefault();
+            var formdata = new FormData( document.getElementById( "myform" ) );
+            $.ajax( { url         :  $( this ).attr( 'action' ),
+                      type        : "POST",
+                      data        : formdata,
+                      success     : successCallback,
+                      error       : failCallback,
+                      processData : false,
+                      contentType : false } );
+          });
+
+      });
+    </script>
+  </body>
+</html>
