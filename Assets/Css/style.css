@@ -11,9 +11,8 @@
 }
 .icon-block .material-icons {
 	font-size: inherit;
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> 4ca4e483f01474221275e75192cd4dc6058d429f
+.hide {
+  display:none;
+}
