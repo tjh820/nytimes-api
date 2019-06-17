@@ -1,6 +1,6 @@
 var data;
 //randomMovie(35) this is a test call
-
+randomMovie(35)
 function randomMovie(genre){
     
     genre.toString()
@@ -25,6 +25,3 @@ function randomMovie(genre){
 
 }
 
-function writeInfo(data){
-    document.write(data)
-}
