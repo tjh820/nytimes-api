@@ -19,7 +19,10 @@ function randomMovie(genre){
         data = response.results[num].title
         console.log(num)
         console.log(data)
+
         utellyAPI(data) //where to call streaming service handler
+        movieResults(data)
+
     })
     // console.log("outside promise:"+data)
 
@@ -28,3 +31,4 @@ function randomMovie(genre){
 function writeInfo(data){
     document.write(data)
 }
+
