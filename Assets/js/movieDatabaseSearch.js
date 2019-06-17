@@ -1,3 +1,7 @@
+//This function will search the movie database for a random movie
+//in the genre of the genre id inputed.
+
+
 var data;
 //randomMovie(35) this is a test call
 randomMovie(35)
