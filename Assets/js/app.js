@@ -6,3 +6,6 @@ $("#submit-search").on("click", function () {
        console.log(data)
       });
 })
+
+$('.dropdown-trigger').dropdown();
+
