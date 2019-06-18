@@ -1,8 +1,14 @@
 
-var successCallback = function (data, textStatus, jqXHR) {
-  var results = data.people[0].emotions
+var successCallback = function (data, emotion) {
+ 
   console.log(data);
-  var greatestEmotion = "anger"
+  if(emotion){
+    greatestEmotion = emotion
+  }
+  
+  else{
+    var results = data.people[0].emotions
+     var greatestEmotion = "anger"
   var greatestEmotionNum = results.anger
   for (keys in results) {
     if (results[keys] > greatestEmotionNum) {
@@ -13,6 +19,8 @@ var successCallback = function (data, textStatus, jqXHR) {
 
   }
   console.log(greatestEmotion, greatestEmotionNum)
+  }
+ 
  
   var genre
   switch (greatestEmotion) {
@@ -37,7 +45,7 @@ var successCallback = function (data, textStatus, jqXHR) {
 
 
   }
-
+  console.log(greatestEmotion, genre)
 
 
   randomMovie(genre)
@@ -60,6 +68,7 @@ $("#myform").submit(
       error: failCallback,
       processData: false,
       contentType: false,
+      ethnicity: true
 
     });
   });
