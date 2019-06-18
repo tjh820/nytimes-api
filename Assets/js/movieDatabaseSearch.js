@@ -2,7 +2,7 @@
 //in the genre of the genre id inputed.
 
 
-var data;
+var data = localStorage.getItem("genreNum");
 //randomMovie(35) this is a test call
 randomMovie(27)
 function randomMovie(genre){
