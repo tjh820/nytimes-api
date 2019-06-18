@@ -18,7 +18,7 @@
 
 <body>
   <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+    <div class="nav-wrapper container"><a id="logo-container" href="" class="brand-logo">Movie Emotion App</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -29,15 +29,7 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  <div class="section no-pad-bot" id="index-banner">
-    <div class="container">
-      <br><br>
-      <h1 class="header center green-text">Movie Emotion App</h1>
 
-      <br>
-
-    </div>
-  </div>
 
 
   <div class="container">
@@ -45,11 +37,10 @@
 
       <!--   Icon Section   -->
       <div class="row center">
-        <div class="col s6 offset-s3">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Choose your streaming services. </h5>
+        <div class="col s4 ">
+          <div class="card">
 
+<<<<<<< HEAD
             <label>
                 <input type="checkbox" class="checkbox" id="netflix"value="Netflix"/>
                 <span class="service">Netflix</span>
@@ -64,10 +55,31 @@
               <input type="checkbox" class="checkbox" id="itune" value="iTunes"/>
               <span class="service">ITunes</span>
             </label>
+=======
 
-            
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+              <h5 class="center">Choose your streaming services. </h5>
 
-            <!-- Commenting out to add later
+              <label>
+                <input type="checkbox" class="netflix" />
+                <span class="service">Netflix</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="amazon" />
+                <span class="service">Amazon Prime</span>
+              </label>
+
+              <label>
+                <input type="checkbox" class="itune" />
+                <span class="service">ITunes</span>
+              </label>
+
+>>>>>>> b4f578d56ea7c82be523f6c81e537ed24091e0d9
+
+
+              <!-- Commenting out to add later
             <label>
               <input type="checkbox" class="hbo" />
               <span class="service">HBO</span>
@@ -75,52 +87,70 @@
           -->
 
 
-            <!-- Commenting out to add later
+              <!-- Commenting out to add later
           <label>
             <input type="checkbox" class="hulu" />
             <span class="service">Hulu</span>
           </label>
          -->
 
-          </div> <br> <br>
+            </div> <br> <br>
+          </div>
         </div>
 
 
 
 
-        <div class="col s6 offset-s3">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">Upload photo of your face.</h5>
+        <div class="col s4">
+          <div class="card">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+              <h5 class="center">Upload photo of your face.</h5>
 
-            <form id="myform" method="post" action="https://api-face.sightcorp.com/api/detect/"
-          enctype="multipart/form-data">
-              <div class="file-field input-field">
-                <div class="btn">
-                  <span>File</span>
-                  <input type="file" name="img">
-                  <input type="text" name="app_key" class = "hide" value ="fd482f74184d4403a31e5ba110adb6c2"/>
-                  
+              <form id="myform" method="post" action="https://api-face.sightcorp.com/api/detect/"
+                enctype="multipart/form-data">
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>File</span>
+                    <input type="file" name="img">
+                    <input type="text" name="app_key" class="hide" value="fd482f74184d4403a31e5ba110adb6c2" />
+
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                  </div>
                 </div>
-                <div class="file-path-wrapper">
-                  <input class="file-path validate" type="text">
-                </div>
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </form>
+            </div> <br> <br>
+          </div>
+        </div>
+
+
+
+
+        <div class="col s4">
+          <div class="card">
+            <div class="icon-block">
+              <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+              <h5 class="center">Or we can pick a movie for you.</h5>
+              <div class="input-field col s12">
+                <select>
+                  <option value="" disabled selected>Choose your option</option>
+                  <option value="1">Option 1</option>
+                  <option value="2">Option 2</option>
+                  <option value="3">Option 3</option>
+                </select>
+                <label>Materialize Select</label>
               </div>
-              <input type="submit"/>
-            </form>
-          </div> <br> <br>
 
-        </div>
+              <div class="row center">
+                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose a cetrgory</a>
+              </div>
 
-
-
-        <div class="col s6 offset-s3">
-          <div class="icon-block">
-            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Let us pick a movie for you.</h5>
-
-            <div class="row center">
-              <a href="results.html" id="download-button" class="btn-large waves-effect waves-light red">Go</a>
+              
             </div>
           </div>
         </div>
@@ -129,39 +159,17 @@
 
       <!-- Dropdown Trigger -->
 
-      <div class="col s6 offset-s3">
 
-        <div class="row center">
-          <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Click To Choose a Movie Category</a>
-        </div>
-        <!-- Dropdown Structure -->
-        <ul id='dropdown1' class='dropdown-content'>
-          <li><a href="#!">Adventure</a></li>
-          <li><a href="#!">Animation</a></li>
-          <li><a href="#!">Comedy</a></li>
-          <li><a href="#!">Crime</a></li>
-          <li><a href="#!">Documentary</a></li>
-          <li><a href="#!">Drama</a></li>
-          <li><a href="#!">Family</a></li>
-          <li><a href="#!">Fantasy</a></li>
-          <li><a href="#!">History</a></li>
-          <li><a href="#!">Horror</a></li>
-          <li><a href="#!">Music</a></li>
-          <li><a href="#!">Mystery</a></li>
-          <li><a href="#!">Romance</a></li>
-          <li><a href="#!">Science Fiction</a></li>
-          <li><a href="#!">TV Movie</a></li>
-          <li><a href="#!">Thriller</a></li>
-          <li><a href="#!">War</a></li>
-          <li><a href="#!">Western</a></li>
-        </ul>
-      </div>
 
 
 
     </div>
     <br><br>
   </div>
+ 
+<div class="row center">
+             <a href="results.html" id="download-button" class="btn-large waves-effect waves-light red">Go</a>
+           </div>
 
   <footer class="page-footer green">
     <div class="container">

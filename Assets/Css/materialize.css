@@ -6856,7 +6856,7 @@ textarea.materialize-textarea {
   padding-left: 25px;
   padding-right: 25px;
   cursor: pointer;
-  display: inline-block;
+  display: block;
   height: 25px;
   line-height: 25px;
   font-size: 1rem;
