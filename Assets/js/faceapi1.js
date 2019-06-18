@@ -41,7 +41,7 @@ var successCallback = function (data, textStatus, jqXHR) {
 
 
   randomMovie(genre)
-  localStorage.getItem("genreNum", genre);
+  localStorage.setItem("genreNum", genre);
 };
 
 var failCallback = function (jqXHR, textStatus, errorThrown) {
