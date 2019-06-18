@@ -24,6 +24,9 @@ function randomMovie(genre){
         console.log(num)
         console.log(data)
         utellyAPI(data) //where to call streaming service handler
+
+        localStorage.setItem("movieToWatch", data);
+
     })
     // console.log("outside promise:"+data)
 
