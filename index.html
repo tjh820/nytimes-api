@@ -51,17 +51,17 @@
             <h5 class="center">Choose your streaming services. </h5>
 
             <label>
-                <input type="checkbox" class="netflix" />
+                <input type="checkbox" class="checkbox" id="netflix"value="Netflix"/>
                 <span class="service">Netflix</span>
-              </label>
+            </label>
             
             <label>
-              <input type="checkbox" class="amazon" />
+              <input type="checkbox" class="checkbox" id="amazon"value="Amazon Prime"/>
               <span class="service">Amazon Prime</span>
             </label>
 
             <label>
-              <input type="checkbox" class="itune" />
+              <input type="checkbox" class="checkbox" id="itune" value="iTunes"/>
               <span class="service">ITunes</span>
             </label>
 
@@ -219,7 +219,39 @@
   <script src="Assets/js/utellyApi.js"></script>
   <script src="Assets/js/movieDatabaseSearch.js"></script>
   <script src="Assets/js/faceapi1.js"></script>
-  <!--Delane Added this one-->
+  
+  <script>
+    localStorage.clear()
+    
+    var services = {
+      netflix:false,
+      amazon:false,
+      itunes:false
+    }
+    localStorage.setItem("userSer",JSON.stringify(services));
+    
+    
+    $("input").change(function(){
+      var service = $(this).val()
+      console.log(service)
+      
+      
+      if($(this).is(":checked")){
+        console.log($(this).val()+" is checked")
+        // services.service.value = true;
+        services[service] = true;
+        console.log(services)
+      }
+      else{
+        console.log($(this).val()+" is not checked")
+        // services.service.value = false;
+        services[service] = false;
+        
+      }
+      localStorage.setItem("userSer",JSON.stringify(services));
+      console.log(localStorage.getItem("userSer"))
+    })
+  </script>
 
 
 </body>
