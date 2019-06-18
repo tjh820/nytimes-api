@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="Assets/Css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="Assets/Css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  
 
 </head>
 
@@ -120,11 +121,15 @@
               <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
               <h5 class="center">Or we can pick a movie for you.</h5>
               <div class="input-field col s12">
-                <select>
+                <select id ="selector">
                   <option value="" disabled selected>Choose your option</option>
-                  <option value="1">Option 1</option>
-                  <option value="2">Option 2</option>
-                  <option value="3">Option 3</option>
+                  <option value="anger">Are u angry?</option>
+                  <option value="happiness">Are you happy?</option>
+                  <option value="sadness">Are you sad?</option>
+                  <option value="disgust">Do you feel disgusted?</option>
+                  <option value="surprise">Do you feel surpised?</option>
+                  <option value="fear">Are you afraid?</option>
+                  
                 </select>
                 <label>Materialize Select</label>
               </div>
@@ -210,6 +215,7 @@
   <script src="Assets/js/utellyApi.js"></script>
   <script src="Assets/js/movieDatabaseSearch.js"></script>
   <script src="Assets/js/faceapi1.js"></script>
+  <script src="Assets/js/manualmood.js"></script>
   <!--Delane Added this one-->
 
 

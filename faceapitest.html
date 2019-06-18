@@ -7,6 +7,7 @@
 <body>
   <form id="myform" method="post" action="https://api-face.sightcorp.com/api/detect/" enctype="multipart/form-data">
     <input type="text" name="app_key" value="fd482f74184d4403a31e5ba110adb6c2" />
+    <input type="text" name="ethnicity" value= 1 />
     <input type="file" name="img" />
     <input type="submit" />
   </form>
@@ -30,6 +31,7 @@
         function (e) {
           e.preventDefault();
           var formdata = new FormData(document.getElementById("myform"));
+          
           $.ajax({
             url: $(this).attr('action'),
             type: "POST",
