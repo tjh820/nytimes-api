@@ -1,3 +1,4 @@
+
 var successCallback = function (data, textStatus, jqXHR) {
   var results = data.people[0].emotions
   console.log(data);
@@ -12,7 +13,7 @@ var successCallback = function (data, textStatus, jqXHR) {
 
   }
   console.log(greatestEmotion, greatestEmotionNum)
-  localStorage.getItem('greatestEmotionNum')
+ 
   var genre
   switch (greatestEmotion) {
     case "anger":
@@ -40,6 +41,7 @@ var successCallback = function (data, textStatus, jqXHR) {
 
 
   randomMovie(genre)
+  localStorage.getItem("genreNum", genre);
 };
 
 var failCallback = function (jqXHR, textStatus, errorThrown) {
