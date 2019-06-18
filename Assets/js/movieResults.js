@@ -1,7 +1,9 @@
+movieResults(localStorage.getItem("movieToWatch"));
+
 function movieResults(input){
     console.log(input);
   var movie = input;
-  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+  var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=cde1759c";
  
   // Creating an AJAX call for the specific movie button being clicked
   $.ajax({
