@@ -7,5 +7,9 @@ $("#submit-search").on("click", function () {
       });
 })
 
-$('.dropdown-trigger').dropdown();
+
+
+$(document).ready(function(){
+    $('select').formSelect();
+  });
 
