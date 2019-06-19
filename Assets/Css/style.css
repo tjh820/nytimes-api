@@ -23,11 +23,16 @@
   padding-top:3px;
 }
 
+.imageSize{
+  height: 80px;
+  width: auto;
+}
 
 
 .dropdown-trigger.btn {
 width: 70%;
 }
+
 
 #bio {
   padding-bottom: 10px;
