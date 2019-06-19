@@ -1,5 +1,5 @@
 function utellyAPI(input) {
-    obj =JSON.parse(localStorage.getItem("userSer"))
+    obj = JSON.parse(localStorage.getItem("userSer"))
     console.log(obj)
 
     var userSerArr = []
