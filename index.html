@@ -24,13 +24,6 @@
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="" class="brand-logo">Moodvie</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
@@ -50,17 +43,23 @@
               <h5 class="center">Choose your streaming services. </h5>
 
               <label>
+
                 <input type="checkbox" value="netflix" class="checkbox" />
+                
                 <span class="service">Netflix</span>
               </label>
 
               <label>
+
                 <input type="checkbox" value="amazon" class="checkbox" />
+
                 <span class="service">Amazon Prime</span>
               </label>
 
               <label>
+
                 <input type="checkbox" value="itunes" class="checkbox" />
+
                 <span class="service">ITunes</span>
               </label>
 
@@ -108,7 +107,9 @@
                     <input class="file-path validate" type="text">
                   </div>
                 </div>
+
                 <button class="btn waves-effect waves-light" id="faceOnly" type="submit" name="action">Submit
+
                   <i class="material-icons right">send</i>
                 </button>
               </form>
@@ -142,6 +143,7 @@
 
                 <a class="dropdown-trigger btn" data-target="dropdown1" onclick="choiceCallback()">Choose a cetrgory</a>
 
+
               </div>
 
 
@@ -164,6 +166,7 @@
   <div class="row center">
     <a href="results.html" id="download-button" class="btn-large waves-effect waves-light red">Go</a>
   </div>
+
   <!-- Footer-->
   <footer class="page-footer green" id="aboutme">
     <div class="container">
@@ -172,14 +175,17 @@
           <h5 class="white-text" id="bio">Company Bio</h5>
           <p class="grey-text text-lighten-4" id="ptag">We are a team of college students working on this project like
             it's our
+
             full time job. Any amount would help support and continue development on this project and is greatly
             appreciated.</p>
 
 
         </div>
 
+
       </div>
     </div>
+
 
   </footer>
 
@@ -197,10 +203,13 @@
   <script src="Assets/js/init.js"></script>
   <script src="Assets/js/app.js"></script>
 
+  <script src="Assets/js/manualmood.js"></script>
+  <script src="Assets/js/faceapi1.js"></script>
   <script src="Assets/js/utellyApi.js"></script>
   <script src="Assets/js/movieDatabaseSearch.js"></script>
   <script src="Assets/js/faceapi1.js"></script>
   <script src="Assets/js/manualmood.js"></script>
+
 
 
   <script>
@@ -211,6 +220,7 @@
       amazon: false,
       itunes: false
     }
+
     localStorage.setItem("userSer", JSON.stringify(services));
 
 
@@ -220,6 +230,7 @@
 
       if ($(this).is(":checked")) {
         console.log($(this).val() + " is checked")
+
         // services.service.value = true;
         services[service] = true;
         console.log(services)

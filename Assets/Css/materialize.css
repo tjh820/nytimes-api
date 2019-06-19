@@ -4558,6 +4558,13 @@ h6 {
   margin: 0.7666666667rem 0 0.46rem 0;
 }
 
+h7 {
+  font-size: 1.15rem;
+  line-height: 510%;
+  margin: 0.7666666667rem 0 0.46rem 0;
+  margin-left: 0.7666666667rem;
+}
+
 em {
   font-style: italic;
 }

@@ -22,12 +22,15 @@ function movieResults(input){
     // var imdbImg = <img src="assets/images/imdb-logo.png"></img>;
  
     var title = response.Title;
+    var year = response.Year;
+
  
-    var hOne = $("<h3>").text(title);
- 
+    var hOne = $("<h3 style='text-align:left;float:left;'>").text(title+" ");
+    var hOne2 = $("<h7 style='text-align:left;float:left;'>").text("("+year+")");
  
     movieDiv.append(hOne);
- 
+    movieDiv.append(hOne2);
+
  
     // // Storing the release year
     // var released = response.Released;
@@ -100,7 +103,12 @@ function movieResults(input){
     $("#synopsis").append(pFour);
 
     services = JSON.parse(localStorage.getItem("validSer"));
+    movieObj = JSON.parse(localStorage.getItem("movieObj"));
+    console.log(movieObj)
     // services = ["Netflix","Amazon Prime", "iTunes"]
+    var netflixImg = $("<img class='imageSize'>").attr("src", "assets/images/netflix.png");
+    var amazonImg = $("<img class='imageSize'>").attr("src", "assets/images/amazon.png");
+    var itunesImg = $("<img class='imageSize'>").attr("src", "assets/images/itunes.png");
 
     console.log(services);
 
@@ -108,17 +116,17 @@ function movieResults(input){
 
       if (services[i]== "Netflix")
       {
-        $("#service").append(services[i]);
+        $("#service").append(netflixImg);
   
       }
       else if (services[i]== "Amazon Prime")
       {
-        $("#service").append(services[i]);
+        $("#service").append(amazonImg);
   
       }
       else if (services[i]== "iTunes")
       {
-        $("#service").append(services[i]);
+        $("#service").append(itunesImg);
   
       }
 
