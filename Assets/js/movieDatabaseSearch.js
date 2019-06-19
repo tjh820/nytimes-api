@@ -6,15 +6,8 @@
 //randomMovie(35) this is a test call
 
 function randomMovie(genre){
-<<<<<<< HEAD
-    obj =JSON.parse(localStorage.getItem("userSer"))
-    console.log
-    
-    genre.toString()
-=======
     console.log("Genre in RM:", genre);
     genre.toString();
->>>>>>> 6703e42de0407dbdbc514d7958eb538c47126a3a
     page = Math.floor(Math.random()*5)+1
     console.log("page:"+ page)
     var queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=5d8a72f0ec806bdf05499ec28669388f&language=en-US&vote_average.gte=6.5&with_genres="+genre+"&page="+page
