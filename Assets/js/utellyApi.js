@@ -60,6 +60,8 @@ $.ajax(settings).done(function (response) {
 
   localStorage.setItem("validSer",JSON.stringify(validSerArr))
   localStorage.setItem("movieObj",JSON.stringify(response))
+  let goBtn = $("<a href='results.html' id='download-button' class='btn-large waves-effect waves-light green'>").text("GO")
+  $("#goButtonHere").append(goBtn)
 
 });
 

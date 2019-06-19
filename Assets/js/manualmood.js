@@ -1,4 +1,4 @@
-$("#selectorSub").on("click", function(){
+function selectorSub(){
     let e = $("#selector :selected")
     console.log(e)
     let emoStr = e[0].value
@@ -6,4 +6,4 @@ $("#selectorSub").on("click", function(){
 
     choiceCallback(emoStr)
 
-})
+}
