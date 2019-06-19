@@ -1,8 +1,8 @@
 
 var successCallback = function (greatestEmotion) {
-  
-  console.log("Emotion is =",greatestEmotion);
- //Once we have the emotion, find the correct genre..
+
+  console.log("Emotion is =", greatestEmotion);
+  //Once we have the emotion, find the correct genre..
   var genre;
   switch (greatestEmotion) {
     case "anger":
@@ -18,14 +18,14 @@ var successCallback = function (greatestEmotion) {
       genre = '878,12'
       break;
     case "sadness":
-    genre = '10749,36'
-    break;
+      genre = '10749,36'
+      break;
     case "surprise":
-    genre = '10752,9648'
-    break;
+      genre = '10752,9648'
+      break;
   }
   console.log("Genre after the switch", genre);
- //Then find a movie
+  //Then find a movie
   randomMovie(genre);
 };
 
@@ -35,42 +35,42 @@ var failCallback = function (jqXHR, textStatus, errorThrown) {
 
 $("#faceOnly").on("click", function (e) {
   console.log("button clicked");
-    e.preventDefault();
-    var formdata = new FormData(document.getElementById("myform"));
-    
-    $.ajax({
-      url: 'https://cors.io?https://api-face.sightcorp.com/api/detect/',
-      type: "POST",
-      data: formdata,
-      // success: successCallback,
-      error: failCallback,
-      processData: false,
-      contentType: false,
-      ethnicity: true
+  e.preventDefault();
+  var formdata = new FormData(document.getElementById("myform"));
 
-    }).then(function (data) {
-      //Go into the data and get the emotion
-      data = JSON.parse(data);
-      console.log(data);
-      console.log(data.people);
-      var results = data.people[0].emotions
-      var greatestEmotion = "anger"
-      var greatestEmotionNum = results.anger
-      //loop over the objects to get the greatest emotion
-      for (keys in results) {
-        if (results[keys] > greatestEmotionNum) {
-          greatestEmotionNum = results[keys]
-          greatestEmotion = keys
-  
-        }
-        //Go to the results page
-       
+  $.ajax({
+    url: 'https://cors.io?https://api-face.sightcorp.com/api/detect/',
+    type: "POST",
+    data: formdata,
+    // success: successCallback,
+    error: failCallback,
+    processData: false,
+    contentType: false,
+    ethnicity: true
+
+  }).then(function (data) {
+    //Go into the data and get the emotion
+    data = JSON.parse(data);
+    console.log(data);
+    console.log(data.people);
+    var results = data.people[0].emotions
+    var greatestEmotion = "anger"
+    var greatestEmotionNum = results.anger
+    //loop over the objects to get the greatest emotion
+    for (keys in results) {
+      if (results[keys] > greatestEmotionNum) {
+        greatestEmotionNum = results[keys]
+        greatestEmotion = keys
+
       }
-      //Make sure we have either
-      console.log("greatest emotion= ",greatestEmotion,"Number is = ", greatestEmotionNum);
-      // call the function and pass it the emotion
-      successCallback(greatestEmotion)
-    });
-  });
+      //Go to the results page
 
- 
+    }
+    //Make sure we have either
+    console.log("greatest emotion= ", greatestEmotion, "Number is = ", greatestEmotionNum);
+    // call the function and pass it the emotion
+    successCallback(greatestEmotion)
+  });
+});
+
+
