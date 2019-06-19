@@ -48,17 +48,17 @@
               <h5 class="center">Choose your streaming services. </h5>
 
               <label>
-                <input type="checkbox" value="netflix" />
+                <input type="checkbox" value="netflix" class="checkbox"/>
                 <span class="service">Netflix</span>
               </label>
 
               <label>
-                <input type="checkbox" value="amazon" />
+                <input type="checkbox" value="amazon" class="checkbox"/>
                 <span class="service">Amazon Prime</span>
               </label>
 
               <label>
-                <input type="checkbox" value="itunes" />
+                <input type="checkbox" value="itunes" class="checkbox"/>
                 <span class="service">ITunes</span>
               </label>
 
@@ -137,7 +137,9 @@
               </div>
 
               <div class="row center">
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose a Category</a>
+
+                <a class='dropdown-trigger btn' data-target='dropdown1'onclick="choiceCallback()">Choose a cetrgory</a>
+
               </div>
 
 
@@ -196,8 +198,8 @@
   <script src="Assets/js/movieDatabaseSearch.js"></script>
   <script src="Assets/js/faceapi1.js"></script>
   <script src="Assets/js/manualmood.js"></script>
-  <!--Delane Added this one-->
   
+
   <script>
     localStorage.clear()
     
@@ -209,11 +211,10 @@
     localStorage.setItem("userSer",JSON.stringify(services));
     
     
-    $("input").change(function(){
+    $(".checkbox").change(function(){
       var service = $(this).val()
       console.log(service)
-      
-      
+
       if($(this).is(":checked")){
         console.log($(this).val()+" is checked")
         // services.service.value = true;
