@@ -15,7 +15,7 @@ function movieResults(input){
     // Creating a div to hold the movie
     var movieDiv = $("<div class=‘movie’>");
     var imgDiv = $("<div class='img'>");
-
+    
     // Storing the rating data
     var imdbRating = response.imdbRating;
 
@@ -99,6 +99,32 @@ function movieResults(input){
     $("#cast").append(pThree);
     $("#synopsis").append(pFour);
 
+    services = JSON.parse(localStorage.getItem("validSer"));
+    // services = ["Netflix","Amazon Prime", "iTunes"]
+
+    console.log(services);
+
+    for (i=0; i<services.length; i++) {
+
+      if (services[i]== "Netflix")
+      {
+        $("#service").append(services[i]);
+  
+      }
+      else if (services[i]== "Amazon Prime")
+      {
+        $("#service").append(services[i]);
+  
+      }
+      else if (services[i]== "iTunes")
+      {
+        $("#service").append(services[i]);
+  
+      }
+
+    
+   
+    }
 
 
 
