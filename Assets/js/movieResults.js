@@ -100,6 +100,8 @@ function movieResults(input){
     $("#synopsis").append(pFour);
 
     services = JSON.parse(localStorage.getItem("validSer"));
+    movieObj = JSON.parse(localStorage.getItem("movieObj"));
+    console.log(movieObj)
     // services = ["Netflix","Amazon Prime", "iTunes"]
 
     console.log(services);

@@ -59,8 +59,8 @@ $.ajax(settings).done(function (response) {
   }
 
   localStorage.setItem("validSer",JSON.stringify(validSerArr))
+  localStorage.setItem("movieObj",JSON.stringify(response))
 
-  
 });
 
 }

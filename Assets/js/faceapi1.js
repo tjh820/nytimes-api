@@ -39,22 +39,22 @@ function choiceCallback(greatestEmotion) {
   var genre;
   switch (emo) {
     case "anger":
-      genre = ['12']
+      genre = ['12','37']
       break;
     case "happiness":
-      genre = ['28']
+      genre = ['28','16']
       break;
     case "disgust":
-      genre = ['80']
+      genre = ['80','35','99','14']
       break;
     case "fear":
-      genre = ['878']
+      genre = ['878','12']
       break;
     case "sadness":
-    genre = ['10749']
+    genre = ['10749','36']
     break;
     case "surprise":
-    genre = ['10752']
+    genre = ['10752','9648']
     break;
   }
   chosenGenre = genre[Math.floor(Math.random()*genre.length)]
