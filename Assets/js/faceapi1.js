@@ -1,4 +1,4 @@
-
+var storedGenre
 var successCallback = function (greatestEmotion) {
   
   console.log("Emotion is =",greatestEmotion);
@@ -6,27 +6,62 @@ var successCallback = function (greatestEmotion) {
   var genre;
   switch (greatestEmotion) {
     case "anger":
-      genre = '12,37'
+      genre = ['12']
       break;
     case "happiness":
-      genre = '28,16'
+      genre = ['28']
       break;
     case "disgust":
-      genre = '80,35,99,14'
+      genre = ['80']
       break;
     case "fear":
-      genre = '878,12'
+      genre = ['878']
       break;
     case "sadness":
-    genre = '10749,36'
+    genre = ['10749']
     break;
     case "surprise":
-    genre = '10752,9648'
+    genre = ['10752']
     break;
   }
-  console.log("Genre after the switch", genre);
+  chosenGenre = genre[Math.floor(Math.random()*genre.length)]
+  console.log("Genre after the switch", chosenGenre);
  //Then find a movie
-  randomMovie(genre);
+  storedGenre = chosenGenre
+  randomMovie(chosenGenre);
+};
+
+function choiceCallback(greatestEmotion) {
+  
+  console.log("Emotion is =",greatestEmotion);
+  let emo = greatestEmotion
+ //Once we have the emotion, find the correct genre..
+  var genre;
+  switch (emo) {
+    case "anger":
+      genre = ['12']
+      break;
+    case "happiness":
+      genre = ['28']
+      break;
+    case "disgust":
+      genre = ['80']
+      break;
+    case "fear":
+      genre = ['878']
+      break;
+    case "sadness":
+    genre = ['10749']
+    break;
+    case "surprise":
+    genre = ['10752']
+    break;
+  }
+  chosenGenre = genre[Math.floor(Math.random()*genre.length)]
+  console.log("Genre after the switch", chosenGenre);
+ //Then find a movie
+  storedGenre = chosenGenre
+  randomMovie(chosenGenre);
 };
 
 var failCallback = function (jqXHR, textStatus, errorThrown) {

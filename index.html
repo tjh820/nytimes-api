@@ -137,7 +137,7 @@
               </div>
 
               <div class="row center">
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose a cetrgory</a>
+                <a class='dropdown-trigger btn' data-target='dropdown1'onclick="choiceCallback()">Choose a cetrgory</a>
               </div>
 
 
@@ -234,8 +234,7 @@
     $(".checkbox").change(function(){
       var service = $(this).val()
       console.log(service)
-      
-      
+
       if($(this).is(":checked")){
         console.log($(this).val()+" is checked")
         // services.service.value = true;
