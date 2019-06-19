@@ -25,8 +25,8 @@ function movieResults(input){
     var year = response.Year;
 
  
-    var hOne = $("<h3>").text(title);
-    var hOne2 = $("<h5>").text(" ("+year+")");
+    var hOne = $("<h3 style='text-align:left;float:left;'>").text(title+" ");
+    var hOne2 = $("<h7 style='text-align:left;float:left;'>").text("("+year+")");
  
     movieDiv.append(hOne);
     movieDiv.append(hOne2);
