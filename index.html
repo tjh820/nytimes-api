@@ -138,7 +138,9 @@
 
               <div class="row center">
 
-                <a class='dropdown-trigger btn' data-target='dropdown1'onclick="choiceCallback()">Choose a cetrgory</a>
+                <a class='dropdown-trigger btn' data-target='dropdown1' id = "selectorSub">Submit
+                    <i class="material-icons right">send</i>
+                </a>
 
               </div>
 
@@ -229,6 +231,11 @@
       }
       localStorage.setItem("userSer",JSON.stringify(services));
       console.log(localStorage.getItem("userSer"))
+    })
+
+
+    $("#selectorSub").click(function(){
+      console.log("howdy")
     })
   </script>
   
