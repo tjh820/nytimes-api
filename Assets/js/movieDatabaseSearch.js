@@ -4,7 +4,7 @@
 
 var data = localStorage.getItem("genreNum");
 //randomMovie(35) this is a test call
-randomMovie(35)
+
 function randomMovie(genre){
     
     genre.toString()
