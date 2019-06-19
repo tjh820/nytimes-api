@@ -1,4 +1,4 @@
-
+var genre
 var successCallback = function (data, emotion) {
  
   console.log(data);
@@ -22,25 +22,25 @@ var successCallback = function (data, emotion) {
   }
  
  
-  var genre
+  
   switch (greatestEmotion) {
     case "anger":
-      genre = 12, 37
+      genre = 12,37;
       break;
     case "happiness":
-      genre = 28, 16
+      genre = 28,16;
       break;
     case "disgust":
-      genre = 80, 35, 99, 14
+      genre = 80,35,99,14;
       break;
     case "fear":
-      genre = 878, 12
+      genre = 878,12;
       break;
     case "sadness":
-    genre = 10749, 36
+      genre = 10749,36;
     break;
     case "surprise":
-    genre = 10752, 9648
+      genre = 10752,9648;
     break;
 
 
@@ -48,7 +48,7 @@ var successCallback = function (data, emotion) {
   console.log(greatestEmotion, genre)
 
 
-  randomMovie(genre)
+  randomMovie(35)
   localStorage.setItem("genreNum", genre);
 };
 
@@ -68,7 +68,7 @@ $("#myform").submit(
       error: failCallback,
       processData: false,
       contentType: false,
-      ethnicity: true
+      ethnicity: false
 
     });
   });

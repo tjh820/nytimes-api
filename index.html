@@ -47,17 +47,17 @@
               <h5 class="center">Choose your streaming services. </h5>
 
               <label>
-                <input type="checkbox" value="netflix" />
+                <input type="checkbox" value="netflix" class="checkbox"/>
                 <span class="service">Netflix</span>
               </label>
 
               <label>
-                <input type="checkbox" value="amazon" />
+                <input type="checkbox" value="amazon" class="checkbox"/>
                 <span class="service">Amazon Prime</span>
               </label>
 
               <label>
-                <input type="checkbox" value="itunes" />
+                <input type="checkbox" value="itunes" class="checkbox"/>
                 <span class="service">ITunes</span>
               </label>
 
@@ -105,7 +105,7 @@
                     <input class="file-path validate" type="text">
                   </div>
                 </div>
-                <button class="btn waves-effect waves-light" type="submit" name="action" onclick="window.location.href='results.html'">Submit
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
                   <i class="material-icons right">send</i>
                 </button>
               </form>
@@ -217,8 +217,8 @@
   <script src="Assets/js/movieDatabaseSearch.js"></script>
   <script src="Assets/js/faceapi1.js"></script>
   <script src="Assets/js/manualmood.js"></script>
-  <!--Delane Added this one-->
   
+
   <script>
     localStorage.clear()
     
@@ -230,7 +230,7 @@
     localStorage.setItem("userSer",JSON.stringify(services));
     
     
-    $("input").change(function(){
+    $(".checkbox").change(function(){
       var service = $(this).val()
       console.log(service)
       

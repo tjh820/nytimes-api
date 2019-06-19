@@ -2,10 +2,12 @@
 //in the genre of the genre id inputed.
 
 
-var data = localStorage.getItem("genreNum");
+
 //randomMovie(35) this is a test call
 
 function randomMovie(genre){
+    obj =JSON.parse(localStorage.getItem("userSer"))
+    console.log
     
     genre.toString()
     page = Math.floor(Math.random()*5)+1
