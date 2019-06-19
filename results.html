@@ -5,7 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
- <title>Movie Results</title>
+ <title>Moodvie Results</title>
  <!-- CSS  -->
  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <link href="Assets/Css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -13,7 +13,7 @@
 </head>
 <body>
  <nav class="light-blue lighten-1" role="navigation">
-   <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+   <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Moodvie Results</a>
      <ul class="right hide-on-med-and-down">
        <li><a href="#">Navbar Link</a></li>
      </ul>
@@ -25,13 +25,63 @@
  </nav>
  <div class="section no-pad-bot" id="index-banner">
    <div class="container">
-     <br><br>
-     <h1 class="header center green-text">Movie Results</h1>
-     <br>
      <body>
+       <br><br> 
            <!-- Movies will Get Dumped Here -->
-           <div class="header center" id="movies-view"></div>
- <!--  Scripts-->
+
+           <div class="row">
+
+            <div class="col s4"><span id="poster"></span>
+            <table>
+                  <tr>
+                    <th>IMDB RATING</th>
+                    <td><span id="imdbrating"></span></td>
+                </tr>
+                  <tr>
+                    <th>GENRES</th>
+                    <td><span id="genre"></span></td>
+                </tr>
+                <tr>
+                  <th>RUNTIME</th>
+                  <td><span id="runtime"></span></td>
+                </tr>
+                <tr>  
+                  <th>RATING</th>
+                  <td><span id="rating"></span></td>
+                </tr> 
+              </table>
+            </div>
+                    
+            <div class="col s8"><span class="flow-text" id="movies-view"></span>
+              <table>
+
+                  <tr>
+                      <th>WATCH NOW</th>
+                  </tr>
+                    <td><span id="netflix">Netflix LOGO + Link to movie</span></td>
+
+                    <tr>
+                        <th>TRAILER</th>
+                    </tr>
+                      <td><span id="youtube">Youtube Movie Trailer</span></td>
+
+                    <tr>
+                      <th>CAST</th>
+                  </tr>
+                    <td><span id="cast"></span></td>
+
+                    <tr>
+                      <th>SYNOPSIS</th>
+                  </tr>
+                  <td><span id="synopsis"></span></td>
+               
+                </table>
+              </div>
+            </div>
+          </div>
+
+            <!-- <div class="header center" id="movies-view"></div> -->
+          <!--  Scripts-->
  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
  <script src="Assets/js/materialize.js"></script>
  <script src="Assets/js/init.js"></script>
@@ -40,5 +90,6 @@
  <script src="Assets/js/utellyApi.js"></script><!--Delane Added this one-->
  <script src="Assets/js/movieResults.js"></script><!--Delane Added this one-->
 
+ <script src="Assets/js/movieDatabaseSearch.js"></script><!--Delane Added this one-->
  </body>
 </html>
