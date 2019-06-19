@@ -23,10 +23,16 @@
   padding-top:3px;
 }
 
-.container {
-  padding:auto;
-}
+
 
 .dropdown-trigger.btn {
 width: 70%;
+}
+
+#bio {
+  padding-bottom: 10px;
+}
+
+#ptag {
+  padding-bottom: 20px;
 }
