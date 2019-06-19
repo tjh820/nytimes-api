@@ -5,6 +5,7 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <!-- jquery CDN-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <title>Moodvie App</title>
@@ -19,6 +20,7 @@
 </head>
 
 <body>
+  <!-- nav bar-->
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="" class="brand-logo">Moodvie</a>
       <ul class="right hide-on-med-and-down">
@@ -30,7 +32,7 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
+      <!-- Card to select streaming service-->
       <div class="row center">
         <div class="col s4 ">
           <div class="card">
@@ -41,17 +43,23 @@
               <h5 class="center">Choose your streaming services. </h5>
 
               <label>
-                <input type="checkbox" value="netflix" />
+
+                <input type="checkbox" value="netflix" class="checkbox" />
+                
                 <span class="service">Netflix</span>
               </label>
 
               <label>
-                <input type="checkbox" value="amazon" />
+
+                <input type="checkbox" value="amazon" class="checkbox" />
+
                 <span class="service">Amazon Prime</span>
               </label>
 
               <label>
-                <input type="checkbox" value="itunes" />
+
+                <input type="checkbox" value="itunes" class="checkbox" />
+
                 <span class="service">ITunes</span>
               </label>
 
@@ -79,7 +87,7 @@
 
 
 
-
+        <!-- card for uploading you photo-->
         <div class="col s4">
           <div class="card">
             <div class="icon-block">
@@ -99,7 +107,9 @@
                     <input class="file-path validate" type="text">
                   </div>
                 </div>
-                   <button class="btn waves-effect waves-light" id="faceOnly" type="submit" name="action" >Submit
+
+                <button class="btn waves-effect waves-light" id="faceOnly" type="submit" name="action">Submit
+
                   <i class="material-icons right">send</i>
                 </button>
               </form>
@@ -109,7 +119,7 @@
 
 
 
-
+        <!--card for selecting emotion if unable to upload a photo-->
         <div class="col s4">
           <div class="card">
             <div class="icon-block">
@@ -130,7 +140,10 @@
               </div>
 
               <div class="row center">
-                <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose a cetrgory</a>
+
+                <a class="dropdown-trigger btn" data-target="dropdown1" onclick="choiceCallback()">Choose a cetrgory</a>
+
+
               </div>
 
 
@@ -140,7 +153,7 @@
       </div>
       <br><br>
 
-      <!-- Dropdown Trigger -->
+
 
 
 
@@ -154,26 +167,26 @@
     <a href="results.html" id="download-button" class="btn-large waves-effect waves-light red">Go</a>
   </div>
 
-  <footer class="page-footer green">
+  <!-- Footer-->
+  <footer class="page-footer green" id="aboutme">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our
+        <div class="col s12">
+          <h5 class="white-text" id="bio">Company Bio</h5>
+          <p class="grey-text text-lighten-4" id="ptag">We are a team of college students working on this project like
+            it's our
+
             full time job. Any amount would help support and continue development on this project and is greatly
             appreciated.</p>
 
 
         </div>
-  
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        Made with <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
-      </div>
 
+
+      </div>
     </div>
+
+
   </footer>
 
 
@@ -194,41 +207,45 @@
   <script src="Assets/js/faceapi1.js"></script>
   <script src="Assets/js/utellyApi.js"></script>
   <script src="Assets/js/movieDatabaseSearch.js"></script>
-  <!--Delane Added this one-->
-  
+  <script src="Assets/js/faceapi1.js"></script>
+  <script src="Assets/js/manualmood.js"></script>
+
+
+
   <script>
     localStorage.clear()
-    
+
     var services = {
-      netflix:false,
-      amazon:false,
-      itunes:false
+      netflix: false,
+      amazon: false,
+      itunes: false
     }
-    localStorage.setItem("userSer",JSON.stringify(services));
-    
-    
-    $("input").change(function(){
+
+    localStorage.setItem("userSer", JSON.stringify(services));
+
+
+    $(".checkbox").change(function () {
       var service = $(this).val()
       console.log(service)
-      
-      
-      if($(this).is(":checked")){
-        console.log($(this).val()+" is checked")
+
+      if ($(this).is(":checked")) {
+        console.log($(this).val() + " is checked")
+
         // services.service.value = true;
         services[service] = true;
         console.log(services)
       }
-      else{
-        console.log($(this).val()+" is not checked")
+      else {
+        console.log($(this).val() + " is not checked")
         // services.service.value = false;
         services[service] = false;
-        
+
       }
-      localStorage.setItem("userSer",JSON.stringify(services));
+      localStorage.setItem("userSer", JSON.stringify(services));
       console.log(localStorage.getItem("userSer"))
     })
   </script>
-  
+
 
 
 </body>
