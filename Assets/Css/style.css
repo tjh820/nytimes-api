@@ -23,6 +23,10 @@
   padding-top:3px;
 }
 
+.imageSize{
+  height: 80px;
+  width: auto;
+}
 
 
 .dropdown-trigger.btn {

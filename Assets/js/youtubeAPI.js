@@ -30,5 +30,5 @@
     gapi.auth2.init({client_id: "YOUR_CLIENT_ID"});
   });
 
-<button onclick="authenticate().then(loadClient)">authorize and load</button>
-<button onclick="execute()">execute</button>
+{/* <button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button> */}
