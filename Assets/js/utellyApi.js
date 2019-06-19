@@ -18,6 +18,7 @@ function utellyAPI(input) {
 $.ajax(settings).done(function (response) {
   console.log(response);
 });
-
+ 
+  window.location.href='results.html';
 }
 
