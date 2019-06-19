@@ -1,3 +1,4 @@
+var btnLimit = 0;
 function utellyAPI(input) {
     obj = JSON.parse(localStorage.getItem("userSer"))
     console.log(obj)
@@ -57,9 +58,13 @@ $.ajax(settings).done(function (response) {
     console.log("recall")
     recall()
   }
-
+  
   localStorage.setItem("validSer",JSON.stringify(validSerArr))
   localStorage.setItem("movieObj",JSON.stringify(response))
+  if(btnLimit == 0){
+  let goBtn = $("<a href='results.html' id='download-button' class='btn-large waves-effect waves-light green'>").text("GO")
+  $("#goButtonHere").append(goBtn)
+    btnLimit ++}
 
 });
 
