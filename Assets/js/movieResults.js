@@ -171,7 +171,6 @@ function movieResults(input){
         $(linkTag).append(itunesImg)
         $("#service").append(linkTag);
   
-      }else{}
       }
       break;
 
