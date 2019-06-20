@@ -111,22 +111,50 @@ function movieResults(input){
     var itunesImg = $("<img class='imageSize'>").attr("src", "Assets/images/itunes.png");
 
     console.log(services);
-
+    let arr = movieObj.results[0].locations
+    console.log(arr)
     for (i=0; i<services.length; i++) {
 
-      if (services[i]== "Netflix")
-      {
-        $("#service").append(netflixImg);
+      if (services[i] == "Netflix")
+      { 
+        let link
+        for(j=0;j<arr.length;j++){
+          if(arr[i].display_name == services[i]){
+            link = arr[i].url
+          }
+        }
+        
+        let linkTag = $("<a>").attr("href",link)
+        $(linkTag).append(netflixImg)
+        $("#service").append(linkTag);
   
       }
       else if (services[i]== "Amazon Prime")
       {
-        $("#service").append(amazonImg);
+        let link
+        for(j=0;j<arr.length;j++){
+          if(arr[i].display_name == services[i]){
+            link = arr[i].url
+          }
+        }
+        
+        let linkTag = $("<a>").attr("href",link)
+        $(linkTag).append(amazonImg)
+        $("#service").append(linkTag);
   
       }
       else if (services[i]== "iTunes")
       {
-        $("#service").append(itunesImg);
+        let link
+        for(j=0;j<arr.length;j++){
+          if(arr[i].display_name == services[i]){
+            link = arr[i].url
+          }
+        }
+        
+        let linkTag = $("<a>").attr("href",link)
+        $(linkTag).append(itunesImg)
+        $("#service").append(linkTag);
   
       }
 
