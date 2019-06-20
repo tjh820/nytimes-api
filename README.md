@@ -14,8 +14,8 @@ jquery - https://jquery.com/
 
 
 Screenshots
-http://prntscr.com/o3yc6l - home page
-http://prntscr.com/o3yda1 - Results page
+http://prntscr.com/o4fcb3 - home page
+http://prntscr.com/o4fbyp  - Results page
 
 
 API Reference
