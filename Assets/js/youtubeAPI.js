@@ -12,6 +12,7 @@ $.ajax({
   console.log(response);
   videoId = response.items[0].id.videoId;
   $("#utube").attr("src","https://www.youtube.com/embed/"+videoId+"?rel=0")
+  
 });
 }
 
