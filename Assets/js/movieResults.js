@@ -113,7 +113,10 @@ function movieResults(input){
     console.log(services);
     let arr = movieObj.results[0].locations
     console.log(arr)
+    
     for (i=0; i<services.length; i++) {
+      
+      if (services[i] == "Netflix")
 
       switch (services[i]) {
 
@@ -168,6 +171,7 @@ function movieResults(input){
         $(linkTag).append(itunesImg)
         $("#service").append(linkTag);
   
+      }else{}
       }
       break;
 

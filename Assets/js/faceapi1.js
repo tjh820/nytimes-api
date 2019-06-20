@@ -72,9 +72,14 @@ $("#faceOnly").on("click", function (e) {
   console.log("button clicked");
     e.preventDefault();
     var formdata = new FormData(document.getElementById("myform"));
+    let userSer = JSON.parse(localStorage.getItem("userSer"))
     if(formdata == undefined){
       console.log("oops")
-    }else{
+    }
+    else if(userSer.amazon == false && userSer.netflix == false && userSer.itunes == false){
+      console.log("oops")
+    }
+    else{
 
     $.ajax({
       url: 'https://cors.io?https://api-face.sightcorp.com/api/detect/',
