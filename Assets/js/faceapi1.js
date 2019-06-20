@@ -72,7 +72,10 @@ $("#faceOnly").on("click", function (e) {
   console.log("button clicked");
     e.preventDefault();
     var formdata = new FormData(document.getElementById("myform"));
-    
+    if(formdata == undefined){
+      console.log("oops")
+    }else{
+
     $.ajax({
       url: 'https://cors.io?https://api-face.sightcorp.com/api/detect/',
       type: "POST",
@@ -105,7 +108,7 @@ $("#faceOnly").on("click", function (e) {
       console.log("greatest emotion= ",greatestEmotion,"Number is = ", greatestEmotionNum);
       // call the function and pass it the emotion
       successCallback(greatestEmotion)
-    });
+    });}
   });
 
  
