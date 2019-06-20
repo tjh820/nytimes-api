@@ -115,27 +115,40 @@ function movieResults(input){
     console.log(arr)
     
     for (i=0; i<services.length; i++) {
+<<<<<<< HEAD
       
       if (services[i] == "Netflix")
+=======
+
+      switch (services[i]) {
+
+
+      case "Netflix":
+>>>>>>> e0cdd27920995bad454b0b76ddecd9f132fdc20e
       { 
         let link
         for(j=0;j<arr.length;j++){
           if(arr[i].display_name == services[i]){
             link = arr[i].url
+            console.log("netflix url added")
           }
         }
         
         let linkTag = $("<a>").attr("href",link)
         $(linkTag).append(netflixImg)
         $("#service").append(linkTag);
-  
+
+        break;
+
       }
-      else if (services[i]== "Amazon Prime")
+      case "Amazon Prime":
       {
         let link
         for(j=0;j<arr.length;j++){
           if(arr[i].display_name == services[i]){
             link = arr[i].url
+            console.log("amazon url added")
+
           }
         }
         
@@ -144,12 +157,16 @@ function movieResults(input){
         $("#service").append(linkTag);
   
       }
-      else if (services[i]== "iTunes")
+      break;
+
+     case "iTunes":
       {
         let link
         for(j=0;j<arr.length;j++){
           if(arr[i].display_name == services[i]){
             link = arr[i].url
+            console.log("itunes url added")
+
           }
         }
         
@@ -157,9 +174,14 @@ function movieResults(input){
         $(linkTag).append(itunesImg)
         $("#service").append(linkTag);
   
+<<<<<<< HEAD
       }else{}
+=======
+      }
+      break;
+>>>>>>> e0cdd27920995bad454b0b76ddecd9f132fdc20e
 
-    
+    }
    
     }
 

@@ -56,8 +56,12 @@ width: 70%;
 }
 
 .page-footer{
-  position:absolute;
+  position: relative;
   bottom:0;
   left:0;
   right:0;
+}
+
+.section{
+  padding-top: 3rem;
 }
