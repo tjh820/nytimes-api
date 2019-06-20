@@ -106,9 +106,9 @@ function movieResults(input){
     movieObj = JSON.parse(localStorage.getItem("movieObj"));
     console.log(movieObj)
     // services = ["Netflix","Amazon Prime", "iTunes"]
-    var netflixImg = $("<img class='imageSize'>").attr("src", "assets/images/netflix.png");
-    var amazonImg = $("<img class='imageSize'>").attr("src", "assets/images/amazon.png");
-    var itunesImg = $("<img class='imageSize'>").attr("src", "assets/images/itunes.png");
+    var netflixImg = $("<img class='imageSize'>").attr("src", "Assets/images/netflix.png");
+    var amazonImg = $("<img class='imageSize'>").attr("src", "Assets/images/amazon.png");
+    var itunesImg = $("<img class='imageSize'>").attr("src", "Assets/images/itunes.png");
 
     console.log(services);
 
