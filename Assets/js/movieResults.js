@@ -105,6 +105,7 @@ function movieResults(input){
     services = JSON.parse(localStorage.getItem("validSer"));
     movieObj = JSON.parse(localStorage.getItem("movieObj"));
     console.log(movieObj)
+    
     // services = ["Netflix","Amazon Prime", "iTunes"]
     var netflixImg = $("<img class='imageSize'>").attr("src", "Assets/images/netflix.png");
     var amazonImg = $("<img class='imageSize'>").attr("src", "Assets/images/amazon.png");
@@ -114,10 +115,8 @@ function movieResults(input){
     let arr = movieObj.results[0].locations
     console.log(arr)
     
-    for (i=0; i<services.length; i++) {
+    for (i=0; i<3; i++) {
       
-      if (services[i] == "Netflix")
-
       switch (services[i]) {
 
 
@@ -172,6 +171,7 @@ function movieResults(input){
         $("#service").append(linkTag);
   
       }
+    
       break;
 
     }

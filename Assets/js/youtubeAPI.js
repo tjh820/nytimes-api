@@ -2,7 +2,7 @@ var videoId
 
 function youtubeAPI(){  
   var movie = localStorage.getItem("movieToWatch");
-  var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=" + movie +" Trailer" +"&key=AIzaSyBzMimKJl4XObH_z0fu467SrC1kZ431-X4";
+  var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q="+movie+" Trailer"+"&key=AIzaSyDSAK1oRccNklDgvb1RUA-ccz8QrciAlb4";
 
 // Creating an AJAX call for the specific movie button being clicked
 $.ajax({
