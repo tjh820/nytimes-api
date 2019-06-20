@@ -23,11 +23,12 @@ Utelly - https://rapidapi.com/utelly/api/utelly
 Omdb - The open movie database - http://www.omdbapi.com/
 F.A.C.E Api - Facial recognition - https://face-api.sightcorp.com/dev-documentation/
 The Movie Database Api - https://developers.themoviedb.org/3/getting-started/introduction
+youtube data api v3 -https://console.developers.google.com/apis/api/youtube.googleapis.com/
 
 
 How to use -
 Select streaming service 
-or upload a photo
+upload a photo
 or select and emotion 
 press the go button
 Result(s) pop up on the results page
