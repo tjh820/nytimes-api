@@ -115,16 +115,13 @@ function movieResults(input){
     console.log(arr)
     
     for (i=0; i<services.length; i++) {
-<<<<<<< HEAD
       
       if (services[i] == "Netflix")
-=======
 
       switch (services[i]) {
 
 
       case "Netflix":
->>>>>>> e0cdd27920995bad454b0b76ddecd9f132fdc20e
       { 
         let link
         for(j=0;j<arr.length;j++){
@@ -174,12 +171,9 @@ function movieResults(input){
         $(linkTag).append(itunesImg)
         $("#service").append(linkTag);
   
-<<<<<<< HEAD
       }else{}
-=======
       }
       break;
->>>>>>> e0cdd27920995bad454b0b76ddecd9f132fdc20e
 
     }
    
