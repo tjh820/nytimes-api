@@ -5,6 +5,7 @@ function selectorSub(){
     if(e[0].value == ""){
         //modul goes here
         console.log("oops")
+
     }
     else if(userSer.amazon == false && userSer.netflix == false && userSer.itunes == false){
         console.log("oops")
